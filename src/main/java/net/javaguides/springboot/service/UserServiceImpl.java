@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,10 +23,10 @@ public class UserServiceImpl implements UserService{
 
 	private UserRepository userRepository;
 	
-	@Autowired
+	//@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
-	public UserServiceImpl(UserRepository userRepository) {
+	public UserServiceImpl(@Lazy UserRepository userRepository) {
 		super();
 		this.userRepository = userRepository;
 	}
