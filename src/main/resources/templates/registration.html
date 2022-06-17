@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+div{
+ background-color: lightblue;
+ 
+}
+body {
+ 
+}
+</style>
 <meta charset="ISO-8859-1">
-<title>Registration</title>
+<title >Registration</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
+	
 </head>
-<body>
+<body >
 
 	<!-- create navigation bar ( header) -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,35 +50,35 @@
 						to our awesome app!</div>
 				</div>
 
-				<h1>Registration</h1>
+				<h1 style="color:Blue;">Registration</h1>
 
 				<form th:action="@{/registration}" method="post" th:object="${user}">
 					<div class="form-group">
-						<label class="control-label" for="firstName"> First Name </label>
+						<label class="control-label" for="firstName" style="color:Tomato;"> First Name </label>
 						<input id="firstName" class="form-control" th:field="*{firstName}"
 							required autofocus="autofocus" />
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="lastName"> Last Name </label> <input
+						<label class="control-label" for="lastName" style="color:Tomato;"> Last Name </label> <input
 							id="lastName" class="form-control" th:field="*{lastName}"
 							required autofocus="autofocus" />
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="email"> Email </label> <input
+						<label class="control-label" for="email" style="color:Tomato;"> Email </label> <input
 							id="email" class="form-control" th:field="*{email}" required
 							autofocus="autofocus" />
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="password"> Password </label> <input
+						<label class="control-label" for="password" style="color:Tomato;"> Password </label> <input
 							id="password" class="form-control" type="password"
 							th:field="*{password}" required autofocus="autofocus" />
 					</div>
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-success">Register</button>
+						<button type="submit" class="btn btn-success" style="color:Tomato;">Register</button>
 						<span>Already registered? <a href="/" th:href="@{/login}">Login
 								here</a></span>
 					</div>
